@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>L-OSINT · Recursos del manual L-OSINT-IA</title>
+<meta name="description" content="Página de arranque de los recursos del manual L-OSINT-IA: la skill compañera, el directorio de herramientas y las actualizaciones. Edición cerrada en septiembre de 2026.">
+<style>
+  :root{
+    --bg:#f7f6f2; --fg:#1f2328; --muted:#5b6470; --line:#d9dcdf;
+    --accent:#2f5d8a; --accent-bg:#eaf1f8; --card:#ffffff;
+  }
+  @media (prefers-color-scheme: dark){
+    :root{ --bg:#14171b; --fg:#e6e8eb; --muted:#9aa4b1; --line:#2b3138; --accent:#7fb0e0; --accent-bg:#1b2733; --card:#1b1f24; }
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--fg);font:17px/1.55 Georgia,"Times New Roman",serif}
+  header,main,footer{max-width:820px;margin:0 auto;padding:0 22px}
+  header{padding-top:56px}
+  .kicker{font:600 13px/1 system-ui,-apple-system,"Segoe UI",sans-serif;letter-spacing:.14em;text-transform:uppercase;color:var(--accent)}
+  h1{font-size:44px;line-height:1.05;margin:14px 0 8px;letter-spacing:-.01em}
+  h1 small{display:block;font-size:20px;font-weight:normal;color:var(--muted);margin-top:10px;letter-spacing:0}
+  .date{margin:22px 0 0;padding:12px 16px;border-left:4px solid var(--accent);background:var(--accent-bg);font-size:15.5px}
+  h2{font:600 13px/1 system-ui,-apple-system,"Segoe UI",sans-serif;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin:48px 0 14px}
+  p{margin:0 0 14px}
+  .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:14px;margin-top:6px}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:18px 18px 16px;display:flex;flex-direction:column;gap:8px}
+  .card h3{margin:0;font-size:19px}
+  .card p{font-size:15px;color:var(--muted);margin:0;flex:1}
+  .card a.btn{align-self:flex-start;font:600 14px system-ui,-apple-system,"Segoe UI",sans-serif;color:var(--accent);text-decoration:none;border:1px solid var(--accent);border-radius:6px;padding:7px 12px}
+  .card a.btn:hover{background:var(--accent-bg)}
+  .note{border:1px solid var(--line);border-radius:10px;padding:18px 20px;background:var(--card)}
+  .note p:last-child{margin:0}
+  a{color:var(--accent)}
+  footer{padding:44px 22px 60px;color:var(--muted);font-size:14.5px;border-top:1px solid var(--line);margin-top:56px}
+  footer p{margin:0 0 6px}
+</style>
+</head>
+<body>
+<header>
+  <div class="kicker">L-OSINT · investigación en fuentes abiertas con límites</div>
+  <h1>L-OSINT-IA
+    <small>Recursos del manual <em>El arte de la ciberinvestigación y el OSINT en tiempos de IA</em></small>
+  </h1>
+  <p class="date"><strong>Estás leyendo esto después de septiembre de 2026.</strong> Es la fecha en que se cerró la primera edición del manual y en que se publicaron estos recursos. Todo lo que hay aquí es correcto a esa fecha, en la medida en que los autores pudieron verificarlo; las plataformas, las herramientas de IA y las normas han seguido cambiando desde entonces. Comprueba antes de apoyarte en un dato concreto.</p>
+</header>
+
+<main>
+  <h2>Qué hay aquí</h2>
+  <div class="cards">
+    <div class="card">
+      <h3>La skill compañera</h3>
+      <p><code>osint-detective-legal</code>: instrucciones para que un agente de IA ejecute la parte de fuentes abiertas de un encargo de investigación privada dentro de la Ley 5/2014 y el RGPD. Código abierto, licencia MIT.</p>
+      <a class="btn" href="https://github.com/salvagam/losint">Repositorio y descarga</a>
+    </div>
+    <div class="card">
+      <h3>Directorio de herramientas</h3>
+      <p>Las herramientas, fuentes y servicios citados en el manual, mantenidos en una página viva que se actualiza cuando algo cambia de dirección o deja de existir.</p>
+      <a class="btn" href="https://start.me/p/w9XbpY/losint">Abrir el directorio</a>
+    </div>
+    <div class="card">
+      <h3>Erratas y actualizaciones</h3>
+      <p>Correcciones al texto, cambios normativos posteriores al cierre y ajustes de la skill. Si encuentras un error, abre un <em>issue</em>.</p>
+      <a class="btn" href="https://github.com/salvagam/losint/issues">Ver o abrir un issue</a>
+    </div>
+  </div>
+
+  <h2>Cómo hay que leer la skill</h2>
+  <div class="note">
+    <p>La skill funciona: se instala en Claude y dirige una recogida real de hallazgos con sus límites de ritmo, su regla de parada y su formato de salida. Pero su aportación no es el código, que es corto y cualquiera puede reescribir. Es <strong>agnóstica y conceptual</strong>: describe qué tiene que preguntar un agente antes de buscar, qué no puede hacer nunca, cuándo debe detenerse y qué datos tiene que entregar para que un hallazgo sea localizable después. Eso vale igual con otro modelo, con otra herramienta o sin ninguna.</p>
+    <p>Por eso <strong>hay que interpretarla, no ejecutarla a ciegas</strong>. Cada despacho adapta el alcance, el ritmo y el formato de entrega a su práctica y a su cliente; lo que no se adapta son las reglas duras, que vienen de la ley y no de una preferencia técnica. Y seguirla no es condición de validez de ningún informe: un informe que documenta URL, fecha y captura, firmado por un detective habilitado que se ratifica en él, es un informe válido con o sin este método (Capítulo 28.4 del manual).</p>
+  </div>
+
+  <h2>Alcance y límites</h2>
+  <div class="note">
+    <p>Nada de lo publicado aquí ni en el manual es asesoramiento jurídico para un caso concreto. Cada tribunal valora la prueba conforme a la sana crítica y a las circunstancias de ese caso; ninguna de las cautelas propuestas garantiza que un hallazgo sea admitido o valorado de una determinada manera.</p>
+    <p>Los autores mantendrán esta dirección y sus recursos mientras consideren que el material del manual sigue vigente. No se garantiza su disponibilidad más allá de ese momento.</p>
+  </div>
+</main>
+
+<footer>
+  <p><strong>Salvador Gamero Casado</strong>, autor del método · <strong>Manuela Díaz Noa</strong>, coautora del marco jurídico.</p>
+  <p>Prólogo de <a href="https://eustaquia.es">EustaquIA</a>. Primera edición, septiembre de 2026. Texto del manual © los autores, todos los derechos reservados; la skill se publica bajo licencia MIT.</p>
+</footer>
+</body>
+</html>
